@@ -112,6 +112,32 @@
             color: #10b981;
             font-weight: bold;
         }
+
+        .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7); /* Background gelap */
+      z-index: 9999;
+      display: flex;               /* Aktifkan flexbox */
+      justify-content: center;     /* Horizontal center */
+      align-items: center;         /* Vertical center */
+    }
+
+    /* Kotak popup */
+    .popup-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    /* Gambar responsive */
+    .popup-content img {
+      width: 400px; /* bisa diubah sesuai kebutuhan */
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
         
     </style>
     
@@ -347,6 +373,13 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
+    <div class="popup-overlay">
+    <div class="popup-content">
+      <a href="https://hr1.lol/signup?ref=senjiki" target="_blank" onclick="trackBannerClick('popup_banner', 'https://hr1.lol/signup?ref=senjiki')">
+        <img src="https://whatsking01.sbs/assets/images/harian.gif" alt="Popup Promo">
+      </a>
+    </div>
+  </div>
     <nav class="bg-white/90 backdrop-blur-md shadow-lg fixed w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
